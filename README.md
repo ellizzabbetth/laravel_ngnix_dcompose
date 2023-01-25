@@ -96,13 +96,17 @@ php service port mapping in Dockerfile: removed
 nginx server wants to talk to php container (direct container to container communication) not through localhost.
 From the php docs we see that php exposes port 9000.
 
-NECESSARY/helpful commands:
+=================================
+NECESSARY/helpful commands to run from root:
+
+ docker-compose up -d --build
 
 docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
 
 docker-compose run artisan
 
 sudo chmod -R o+w src/storage src/bootstrap/cache
+
 =================================
 
 
